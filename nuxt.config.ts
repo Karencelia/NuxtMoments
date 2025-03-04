@@ -7,5 +7,13 @@ export default defineNuxtConfig({
     public: {
       baseUrl: process.env.BASE_URL || 'https://eventful-moments-api.onrender.com/api/v1',
     }
-  }
+  },
+  app: {
+    head: {
+      title: 'Eventful Moments',
+      meta: [
+        { name: 'description', content: 'An app to store beautiful moments' },
+      ],
+    },
+  },
 });
