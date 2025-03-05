@@ -5,14 +5,13 @@ definePageMeta({
 
 import moment from'moment';
 import { ref, reactive, onMounted } from 'vue';
-import { useRoute, useRouter } from '#imports'; // Nuxt 3 auto-import
+import { useRoute, useRouter } from '#imports';
 import { useToast } from 'vue-toastification';
 
 const toast = useToast();
 const route = useRoute();
 const router = useRouter();
 const isLoading = ref(false);
-const date = "date";
 
 const form = reactive({
   futureDate: '',

@@ -36,16 +36,11 @@ const handleLogin = async (event) => {
       console.log('Login successful:', response);
 
       const token = response?.token;
-      const user = response?.user; // Assuming response includes user details
-
-      if (token && user) {
+      if (token) {
         localStorage.setItem('authToken', token);
-        localStorage.setItem('fullname', user.fullname); // Save full name
-
-        console.log("Saved Full Name:", user.fullname);
         navigateTo('/mybucket');
       } else {
-        console.error('Token or user data not found in response:', response);
+        console.error('Token not found in response:', response);
         formError.value = 'Something went wrong. Please try again.';
       }
     } catch (err) {
@@ -56,7 +51,7 @@ const handleLogin = async (event) => {
     }
   }
 };
-
+ 
 </script>
 
 <template>
