@@ -13,7 +13,6 @@ const item = ref(null);
 const isLoading = ref(false);
 const formError = ref("");
 
-// Fetch single moment
 const singleMoment = async () => {
   const token = localStorage.getItem("authToken");
 
@@ -92,7 +91,6 @@ const deleteItem = async () => {
   }
 };
 
-// Fetch the moment when the component is mounted
 onMounted(() => {
   singleMoment();
 });
